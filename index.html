@@ -21,25 +21,50 @@
 </head>
 <body>
 
+  <!-- ====== PAGE LOADER ====== -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-inner">
+      <div class="loader-bar"></div>
+      <div class="loader-text">
+        <span class="loader-char">A</span><span class="loader-char">K</span><span class="loader-char">A</span><span class="loader-char">S</span><span class="loader-char">H</span><span class="loader-char">&nbsp;</span><span class="loader-char">K</span>
+      </div>
+      <div class="loader-subtitle">Loading Experience</div>
+    </div>
+    <div class="loader-curtain loader-curtain-left"></div>
+    <div class="loader-curtain loader-curtain-right"></div>
+  </div>
+
+  <!-- ====== CUSTOM CURSOR ====== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
   <!-- Grain Overlay -->
   <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- ====== SCROLL PROGRESS ====== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- ====== NAVBAR ====== -->
   <nav class="navbar" id="navbar">
     <div class="container navbar-inner">
-      <a href="#" class="navbar-brand">AKASH K</a>
+      <a href="#" class="navbar-brand" data-magnetic>
+        <span class="brand-text" data-split-text>AKASH K</span>
+        <span class="brand-glow"></span>
+      </a>
 
       <div class="navbar-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-magnetic><span>About</span></a>
+        <a href="#experience" data-magnetic><span>Experience</span></a>
+        <a href="#projects" data-magnetic><span>Projects</span></a>
+        <a href="#skills" data-magnetic><span>Skills</span></a>
+        <a href="#contact" data-magnetic><span>Contact</span></a>
       </div>
 
-      <a href="https://github.com/AKASHKOLANCHIYAPAN" target="_blank" rel="noopener noreferrer" class="navbar-cta">
+      <a href="https://github.com/AKASHKOLANCHIYAPAN" target="_blank" rel="noopener noreferrer" class="navbar-cta" data-magnetic>
         <i data-lucide="github"></i>
-        View GitHub
+        <span>View GitHub</span>
+        <div class="btn-shine"></div>
       </a>
 
       <div class="hamburger" aria-label="Toggle navigation menu">
@@ -60,19 +85,26 @@
     <a href="https://github.com/AKASHKOLANCHIYAPAN" target="_blank" rel="noopener noreferrer">GitHub</a>
   </div>
 
-  <!-- ====== HERO SECTION — ROYAL EDITION ====== -->
+  <!-- ====== HERO SECTION — DIVINE EDITION ====== -->
   <section class="hero" id="about">
+    <!-- Particle Canvas -->
+    <canvas class="hero-particles" id="heroParticles"></canvas>
+    <!-- Gradient Orbs -->
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
+
     <div class="container">
       <div class="hero-grid">
-        <div class="hero-content">
-          <div class="hero-badge reveal">
+        <div class="hero-content" data-parallax-layer="0.3">
+          <div class="hero-badge reveal-blur">
             <span class="dot"></span>
-            <span class="hero-badge-text">Available for Freelance Work</span>
+            <span class="hero-badge-text"></span>
           </div>
 
           <h1>
-            <span class="line"><span class="line-inner">Building <span class="highlight">Autonomous</span></span></span>
-            <span class="line"><span class="line-inner"><span class="highlight">Systems.</span> Bridging AI</span></span>
+            <span class="line"><span class="line-inner">Building <span class="highlight" data-glitch="Autonomous">Autonomous</span></span></span>
+            <span class="line"><span class="line-inner"><span class="highlight" data-glitch="Systems.">Systems.</span> Bridging AI</span></span>
             <span class="line"><span class="line-inner">Agents, Machine Learning,</span></span>
             <span class="line"><span class="line-inner">and IoT Automation.</span></span>
           </h1>
@@ -84,35 +116,43 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#projects" class="btn-primary">
-              Explore Portfolio
+            <a href="#projects" class="btn-primary" data-magnetic data-ripple>
+              <span>Explore Portfolio</span>
               <i data-lucide="arrow-down-right"></i>
+              <div class="btn-shine"></div>
             </a>
-            <a href="https://www.linkedin.com/in/akash-k-74ba7b326" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            <a href="https://www.linkedin.com/in/akash-k-74ba7b326" target="_blank" rel="noopener noreferrer" class="btn-secondary" data-magnetic data-ripple>
               <i data-lucide="linkedin"></i>
-              Connect on LinkedIn
+              <span>Connect on LinkedIn</span>
             </a>
           </div>
 
           <div class="hero-stats">
-            <div class="hero-stat">
-              <span class="hero-stat-value">6+</span>
+            <div class="hero-stat reveal-blur" data-delay="0">
+              <span class="hero-stat-value" data-count="6">0+</span>
               <span class="hero-stat-label">Projects Delivered</span>
             </div>
-            <div class="hero-stat">
-              <span class="hero-stat-value">3+</span>
+            <div class="hero-stat reveal-blur" data-delay="100">
+              <span class="hero-stat-value" data-count="3">0+</span>
               <span class="hero-stat-label">AI Systems Built</span>
             </div>
-            <div class="hero-stat">
-              <span class="hero-stat-value">2+</span>
+            <div class="hero-stat reveal-blur" data-delay="200">
+              <span class="hero-stat-value" data-count="2">0+</span>
               <span class="hero-stat-label">Freelance Clients</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-image-wrapper">
+        <div class="hero-image-wrapper" data-parallax-layer="0.15">
           <div class="hero-image-container">
             <img src="AKASH-IMAGE.jpeg" alt="Akash K — AI Engineer and Full-Stack Developer" />
+            <div class="image-overlay"></div>
+          </div>
+          <!-- Orbit Ring -->
+          <div class="hero-orbit" aria-hidden="true">
+            <div class="orbit-dot"></div>
+            <div class="orbit-dot"></div>
+            <div class="orbit-dot"></div>
           </div>
           <div class="hero-floating-card card-1">
             <div class="card-icon blue">
@@ -129,23 +169,53 @@
         </div>
       </div>
     </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
   </section>
+
+  <!-- ====== MARQUEE BANNER ====== -->
+  <div class="marquee-banner">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>AI ENGINEER</span><span class="marquee-dot">◆</span>
+        <span>FULL-STACK DEVELOPER</span><span class="marquee-dot">◆</span>
+        <span>IoT ARCHITECT</span><span class="marquee-dot">◆</span>
+        <span>MACHINE LEARNING</span><span class="marquee-dot">◆</span>
+        <span>DEEP LEARNING</span><span class="marquee-dot">◆</span>
+        <span>ROBOTICS</span><span class="marquee-dot">◆</span>
+        <span>AI ENGINEER</span><span class="marquee-dot">◆</span>
+        <span>FULL-STACK DEVELOPER</span><span class="marquee-dot">◆</span>
+        <span>IoT ARCHITECT</span><span class="marquee-dot">◆</span>
+        <span>MACHINE LEARNING</span><span class="marquee-dot">◆</span>
+        <span>DEEP LEARNING</span><span class="marquee-dot">◆</span>
+        <span>ROBOTICS</span><span class="marquee-dot">◆</span>
+      </div>
+    </div>
+  </div>
 
   <!-- ====== EXPERIENCE / TIMELINE SECTION ====== -->
   <section class="experience-section" id="experience">
     <div class="container">
       <div class="experience-header">
-        <span class="section-label reveal">Resume & Milestones</span>
-        <h2 class="section-title reveal reveal-delay-1">Featured Experience<br />& Technical Projects</h2>
-        <p class="section-subtitle reveal reveal-delay-2">A curated timeline of my most impactful engineering milestones — from industry internships to production AI systems.</p>
+        <span class="section-label reveal-clip">Resume & Milestones</span>
+        <h2 class="section-title reveal-clip reveal-delay-1">Featured Experience<br />&amp; Technical Projects</h2>
+        <p class="section-subtitle reveal-blur reveal-delay-2">A curated timeline of my most impactful engineering milestones — from industry internships to production AI systems.</p>
       </div>
 
       <div class="timeline">
         <div class="timeline-progress"></div>
 
         <!-- Milestone 1 -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
+        <div class="timeline-item reveal-slide-right">
+          <div class="timeline-dot">
+            <div class="timeline-dot-ping"></div>
+          </div>
           <div class="timeline-date">May 2026 — June 2026</div>
           <h3 class="timeline-title">Machine Learning Intern</h3>
           <p class="timeline-org">Scow Tech Solutions · ID: STS412</p>
@@ -161,8 +231,10 @@
         </div>
 
         <!-- Milestone 2 -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
+        <div class="timeline-item reveal-slide-right">
+          <div class="timeline-dot">
+            <div class="timeline-dot-ping"></div>
+          </div>
           <div class="timeline-date">Jan 2026 — Mar 2026</div>
           <h3 class="timeline-title">Autonomous Multi-Agent System</h3>
           <p class="timeline-org">Core AI Project</p>
@@ -194,8 +266,10 @@
         </div>
 
         <!-- Milestone 3 -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
+        <div class="timeline-item reveal-slide-right">
+          <div class="timeline-dot">
+            <div class="timeline-dot-ping"></div>
+          </div>
           <div class="timeline-date">Jan 2025 — Jul 2025</div>
           <h3 class="timeline-title">CNN-Powered Paddy Variety Detector</h3>
           <p class="timeline-org">Deep Learning Project</p>
@@ -223,14 +297,15 @@
   <section class="projects-section" id="projects">
     <div class="container">
       <div class="projects-header">
-        <span class="section-label reveal">Freelance & Client Works</span>
-        <h2 class="section-title reveal reveal-delay-1">Selected Projects<br />& Competitive Works</h2>
-        <p class="section-subtitle reveal reveal-delay-2">An architectural overview of freelance platforms, embedded systems, and competitive achievements.</p>
+        <span class="section-label reveal-clip">Freelance & Client Works</span>
+        <h2 class="section-title reveal-clip reveal-delay-1">Selected Projects<br />&amp; Competitive Works</h2>
+        <p class="section-subtitle reveal-blur reveal-delay-2">An architectural overview of freelance platforms, embedded systems, and competitive achievements.</p>
       </div>
 
       <div class="projects-grid">
         <!-- Project 1 -->
-        <div class="project-card">
+        <div class="project-card" data-tilt>
+          <div class="project-card-glow"></div>
           <div class="project-card-icon icon-web">
             <i data-lucide="globe"></i>
           </div>
@@ -239,10 +314,12 @@
           <p class="project-card-desc">
             Engineered a high-performance, fully responsive web application featuring live streaming API integrations, interactive prayer walls, administrative church directories, donation support, and modern glassmorphism dashboards. Optimized for seamless community accessibility.
           </p>
+          <div class="project-card-number">01</div>
         </div>
 
         <!-- Project 2 -->
-        <div class="project-card">
+        <div class="project-card" data-tilt>
+          <div class="project-card-glow"></div>
           <div class="project-card-icon icon-ecommerce">
             <i data-lucide="shopping-bag"></i>
           </div>
@@ -251,10 +328,12 @@
           <p class="project-card-desc">
             Developed a minimalist multi-language e-commerce platform incorporating instant client-side language toggling, fluid navigation, and responsive product collection grids designed to elevate local and international retail engagement.
           </p>
+          <div class="project-card-number">02</div>
         </div>
 
         <!-- Project 3 -->
-        <div class="project-card">
+        <div class="project-card" data-tilt>
+          <div class="project-card-glow"></div>
           <div class="project-card-icon icon-hardware">
             <i data-lucide="circuit-board"></i>
           </div>
@@ -263,10 +342,12 @@
           <p class="project-card-desc">
             Designed and built an autonomous self-balancing robotic chassis from scratch utilizing an Arduino Nano and MPU6050 accelerometer/gyroscope. Authored real-time PID control logic and created a custom PCB with integrated buck converters for stable voltage regulation.
           </p>
+          <div class="project-card-number">03</div>
         </div>
 
         <!-- Project 4 -->
-        <div class="project-card">
+        <div class="project-card" data-tilt>
+          <div class="project-card-glow"></div>
           <div class="project-card-icon icon-brand">
             <i data-lucide="palette"></i>
           </div>
@@ -275,10 +356,12 @@
           <p class="project-card-desc">
             Designed the minimalist digital visual identity, logo, and foundational architectural structure for PROTOBERG, an innovative emerging ecosystem specializing in IoT and AIoT component simulation.
           </p>
+          <div class="project-card-number">04</div>
         </div>
 
         <!-- Project 5 -->
-        <div class="project-card">
+        <div class="project-card" data-tilt>
+          <div class="project-card-glow"></div>
           <div class="project-card-icon icon-data">
             <i data-lucide="bar-chart-3"></i>
           </div>
@@ -287,10 +370,12 @@
           <p class="project-card-desc">
             Created an interactive data visualization dashboard built using Power BI to analyze and visualize cases, deaths, and moving averages across districts, translating raw health data into actionable insights using custom metrics and dynamic graphs.
           </p>
+          <div class="project-card-number">05</div>
         </div>
 
         <!-- Honorable Mention -->
-        <div class="project-card">
+        <div class="project-card" data-tilt>
+          <div class="project-card-glow"></div>
           <div class="project-card-icon icon-competition">
             <i data-lucide="trophy"></i>
           </div>
@@ -299,6 +384,7 @@
           <p class="project-card-desc">
             Recognized as a Stage-2 National Participant in the IIT Bombay E-Yantra competition — a competitive, advanced embedded robotics testing program requiring multi-disciplinary engineering skills.
           </p>
+          <div class="project-card-number">06</div>
         </div>
       </div>
     </div>
@@ -308,14 +394,14 @@
   <section class="skills-section" id="skills">
     <div class="container">
       <div class="skills-header">
-        <span class="section-label reveal">Capabilities</span>
-        <h2 class="section-title reveal reveal-delay-1">Technical Matrix<br />& Education</h2>
-        <p class="section-subtitle reveal reveal-delay-2">A breakdown of core competencies across AI, hardware, and modern web development.</p>
+        <span class="section-label reveal-clip">Capabilities</span>
+        <h2 class="section-title reveal-clip reveal-delay-1">Technical Matrix<br />&amp; Education</h2>
+        <p class="section-subtitle reveal-blur reveal-delay-2">A breakdown of core competencies across AI, hardware, and modern web development.</p>
       </div>
 
       <div class="skills-grid">
         <!-- AI -->
-        <div class="skill-category">
+        <div class="skill-category" data-tilt>
           <div class="skill-category-icon ai-icon">
             <i data-lucide="brain"></i>
           </div>
@@ -331,7 +417,7 @@
         </div>
 
         <!-- Hardware -->
-        <div class="skill-category">
+        <div class="skill-category" data-tilt>
           <div class="skill-category-icon hw-icon">
             <i data-lucide="cpu"></i>
           </div>
@@ -347,7 +433,7 @@
         </div>
 
         <!-- Web -->
-        <div class="skill-category">
+        <div class="skill-category" data-tilt>
           <div class="skill-category-icon web-icon">
             <i data-lucide="code-2"></i>
           </div>
@@ -365,7 +451,7 @@
       </div>
 
       <!-- Education Block -->
-      <div class="education-block reveal">
+      <div class="education-block reveal-blur">
         <div class="education-grid">
           <div class="education-main">
             <span class="section-label" style="margin-bottom: 20px;">Education</span>
@@ -404,7 +490,7 @@
     </div>
   </section>
 
-  <!-- ====== CONTACT SECTION — MASTERCLASS EDITION ====== -->
+  <!-- ====== CONTACT SECTION — DIVINE EDITION ====== -->
   <section class="contact-section" id="contact">
     <div class="container">
       <!-- Aurora Background -->
@@ -414,11 +500,13 @@
         <div class="aurora-blob"></div>
       </div>
       <div class="contact-grid-bg" aria-hidden="true"></div>
+      <!-- Floating Particles -->
+      <div class="contact-particles" aria-hidden="true"></div>
 
       <div class="contact-header">
-        <span class="section-label reveal">Get In Touch</span>
-        <h2 class="section-title reveal reveal-delay-1">Let's build something<br /><span class="contact-title-highlight">autonomous.</span></h2>
-        <p class="section-subtitle reveal reveal-delay-2">Open for freelance collaborations, research opportunities, and engineering partnerships.</p>
+        <span class="section-label reveal-clip">Get In Touch</span>
+        <h2 class="section-title reveal-clip reveal-delay-1">Let's build something<br /><span class="contact-title-highlight">autonomous.</span></h2>
+        <p class="section-subtitle reveal-blur reveal-delay-2">Open for freelance collaborations, research opportunities, and engineering partnerships.</p>
       </div>
 
       <div class="contact-grid">
@@ -457,9 +545,10 @@
             <p class="freelance-cta-desc">I'm available for freelance web development, AI integrations, and IoT projects. Let's turn your idea into a production-grade reality.</p>
           </div>
           <div class="freelance-cta-right">
-            <a href="mailto:berg.freelancer18@gmail.com" class="freelance-email-btn">
+            <a href="mailto:berg.freelancer18@gmail.com" class="freelance-email-btn" data-magnetic data-ripple>
               <span>berg.freelancer18@gmail.com</span>
               <i data-lucide="arrow-right"></i>
+              <div class="btn-shine"></div>
             </a>
             <span class="freelance-email-sub">Typically responds within 24 hours</span>
           </div>
@@ -467,11 +556,11 @@
       </div>
 
       <div class="contact-socials">
-        <a href="https://www.linkedin.com/in/akash-k-74ba7b326" target="_blank" rel="noopener noreferrer" class="social-link">
+        <a href="https://www.linkedin.com/in/akash-k-74ba7b326" target="_blank" rel="noopener noreferrer" class="social-link" data-magnetic>
           <i data-lucide="linkedin"></i>
           LinkedIn
         </a>
-        <a href="https://github.com/AKASHKOLANCHIYAPAN" target="_blank" rel="noopener noreferrer" class="social-link">
+        <a href="https://github.com/AKASHKOLANCHIYAPAN" target="_blank" rel="noopener noreferrer" class="social-link" data-magnetic>
           <i data-lucide="github"></i>
           GitHub
         </a>
@@ -484,8 +573,11 @@
   </section>
 
   <!-- Back to Top -->
-  <button class="back-to-top" aria-label="Back to top">
+  <button class="back-to-top" aria-label="Back to top" data-magnetic>
     <i data-lucide="arrow-up"></i>
+    <svg class="back-to-top-progress" viewBox="0 0 48 48">
+      <circle cx="24" cy="24" r="20" />
+    </svg>
   </button>
 
   <!-- Scripts -->
@@ -493,5 +585,6 @@
   <script>
     lucide.createIcons();
   </script>
+
 </body>
 </html>
